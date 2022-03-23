@@ -1,6 +1,6 @@
 {
-  "name": "Aggregate Comments in an Excel Workbook",
-  "description": "This automation aggregates and summarizes the comments in an Excel workbook.",
+  "name": "Aggregate notes in an Excel workbook",
+  "description": "This automation aggregates and summarizes the notes in an Excel workbook.",
   "main": "Main.xaml",
   "dependencies": {
     "UiPath.Excel.Activities": "[2.10.4]",
@@ -19,7 +19,7 @@
     "autoDispose": false,
     "netFrameworkLazyLoading": false,
     "isPausable": true,
-    "isAttended": false,
+    "isAttended": true,
     "requiresUserInteraction": true,
     "supportsPersistence": false,
     "excludedLoggedData": [
