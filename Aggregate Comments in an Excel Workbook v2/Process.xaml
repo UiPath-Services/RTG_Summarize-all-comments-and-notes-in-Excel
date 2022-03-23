@@ -111,20 +111,12 @@
           <av:Size x:Key="ShapeSize">200,51</av:Size>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
-      <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke CreateLinks workflow" sap:VirtualizedContainerService.HintSize="334,112" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" LogEntry="No" LogExit="No" UnSafe="False" WorkflowFileName="CreateLinks.xaml">
+      <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke CreateLinks workflow" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" LogEntry="No" LogExit="No" UnSafe="False" WorkflowFileName="CreateLinks.xaml">
         <ui:InvokeWorkflowFile.Arguments>
-          <InArgument x:TypeArguments="scg:List(x:String)" x:Key="in_ExcelFilesList">
-            <mva:VisualBasicValue x:TypeArguments="scg:List(x:String)" ExpressionText="list_ExcelFilesList" />
-          </InArgument>
-          <InArgument x:TypeArguments="scg:Dictionary(x:String, x:Object)" x:Key="in_Config">
-            <mva:VisualBasicValue x:TypeArguments="scg:Dictionary(x:String, x:Object)" ExpressionText="io_Config" />
-          </InArgument>
-          <InOutArgument x:TypeArguments="x:String" x:Key="io_FinalFormMessage">
-            <mva:VisualBasicReference x:TypeArguments="x:String" ExpressionText="io_FinalFormMessage" />
-          </InOutArgument>
-          <InArgument x:TypeArguments="x:String" x:Key="in_ProgessWindowId">
-            <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="in_ProcessWindowId" />
-          </InArgument>
+          <InArgument x:TypeArguments="scg:List(x:String)" x:Key="in_ExcelFilesList">[list_ExcelFilesList]</InArgument>
+          <InArgument x:TypeArguments="scg:Dictionary(x:String, x:Object)" x:Key="in_Config">[io_Config]</InArgument>
+          <InOutArgument x:TypeArguments="x:String" x:Key="io_FinalFormMessage">[io_FinalFormMessage]</InOutArgument>
+          <InArgument x:TypeArguments="x:String" x:Key="in_ProgessWindowId">[in_ProcessWindowId]</InArgument>
         </ui:InvokeWorkflowFile.Arguments>
         <sap:WorkflowViewStateService.ViewState>
           <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -141,7 +133,7 @@
           <av:PointCollection x:Key="ConnectorLocation">100,295.5 100,469.5 220,469.5</av:PointCollection>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
-      <TryCatch DisplayName="Try Catch get Single File" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="TryCatch_1">
+      <TryCatch DisplayName="Try Catch get Single File" sap:VirtualizedContainerService.HintSize="609,1143" sap2010:WorkflowViewState.IdRef="TryCatch_1">
         <sap:WorkflowViewStateService.ViewState>
           <scg:Dictionary x:TypeArguments="x:String, x:Object">
             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -178,7 +170,7 @@
                 </Sequence>
               </If.Else>
             </If>
-            <uwa:ProgressWindowChangeMessage InterProcessPipeName="{x:Null}" DisplayName="Progress Window Change Message " sap:VirtualizedContainerService.HintSize="529,186" sap2010:WorkflowViewState.IdRef="ProgressWindowChangeMessage_3" Message="[&quot;Aggregating comments&quot; + vbNewLine + &quot;Please wait...&quot;]" WindowId="[in_ProcessWindowId]" />
+            <uwa:ProgressWindowChangeMessage InterProcessPipeName="{x:Null}" DisplayName="Progress Window Change Message " sap:VirtualizedContainerService.HintSize="529,186" sap2010:WorkflowViewState.IdRef="ProgressWindowChangeMessage_3" Message="[&quot;Aggregating notes&quot; + vbNewLine + &quot;Please wait...&quot;]" WindowId="[in_ProcessWindowId]" />
           </Sequence>
         </TryCatch.Try>
         <TryCatch.Catches>
@@ -263,7 +255,7 @@
                 </ActivityAction>
               </ui:ForEach.Body>
             </ui:ForEach>
-            <uwa:ProgressWindowChangeMessage InterProcessPipeName="{x:Null}" DisplayName="Progress Window Change Message " sap:VirtualizedContainerService.HintSize="741,186" sap2010:WorkflowViewState.IdRef="ProgressWindowChangeMessage_4" Message="[&quot;Aggregating comments&quot; + vbNewLine + &quot;Please wait...&quot;]" WindowId="[in_ProcessWindowId]" />
+            <uwa:ProgressWindowChangeMessage InterProcessPipeName="{x:Null}" DisplayName="Progress Window Change Message " sap:VirtualizedContainerService.HintSize="741,186" sap2010:WorkflowViewState.IdRef="ProgressWindowChangeMessage_4" Message="[&quot;Aggregating notes&quot; + vbNewLine + &quot;Please wait...&quot;]" WindowId="[in_ProcessWindowId]" />
           </Sequence>
         </TryCatch.Try>
         <TryCatch.Catches>
