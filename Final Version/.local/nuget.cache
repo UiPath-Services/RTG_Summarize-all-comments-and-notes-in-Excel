@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "2BltDaTxwYwJoLF3YR6RNQftHccWEWB235ZgjLaCANS1C7arTT6WeOdCNhfsRSfACZL7ACo2QFdaUZ/8Y63Iqw==",
+  "dgSpecHash": "hWpsPt1FF3W3YZoAZ0rNoc7zQrTbci656B9cqjCjsOj4juUhiYxADLpWo/dD0i+X3bQtUoixK51ohdnO03HGfw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\tuan.nguyen\\Desktop\\2.0\\Finished\\Summarize all comments and notes in Excel\\.local\\",
+  "projectFilePath": "C:\\Users\\tuan.nguyen\\Desktop\\2.0\\Final\\Summarize all comments and notes in Excel\\.local\\",
   "expectedPackageFiles": [
     "C:\\Users\\tuan.nguyen\\.nuget\\packages\\avalonedit\\6.0.1\\avalonedit.6.0.1.nupkg.sha512",
     "C:\\Users\\tuan.nguyen\\.nuget\\packages\\castle.core\\4.4.0\\castle.core.4.4.0.nupkg.sha512",

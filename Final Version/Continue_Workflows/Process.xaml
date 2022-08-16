@@ -5,7 +5,7 @@
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>1458,1052</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1081,1052</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>ProcessTransaction_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -148,14 +148,10 @@
           <av:PointCollection x:Key="ConnectorLocation">100,385.5 100,449.52 220,449.52</av:PointCollection>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
-      <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke GetSingleExcelFile workflow" sap:VirtualizedContainerService.HintSize="346,112" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_3" UnSafe="False" WorkflowFileName="Continue_Workflows\GetSingleExcelFile.xaml">
+      <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke GetSingleExcelFile workflow" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_3" UnSafe="False" WorkflowFileName="Continue_Workflows\GetSingleExcelFile.xaml">
         <ui:InvokeWorkflowFile.Arguments>
-          <InArgument x:TypeArguments="scg:Dictionary(x:String, x:Object)" x:Key="io_dict_Config">
-            <mva:VisualBasicValue x:TypeArguments="scg:Dictionary(x:String, x:Object)" ExpressionText="io_dict_Config" />
-          </InArgument>
-          <InOutArgument x:TypeArguments="scg:List(x:String)" x:Key="io_list_ExcelFilesList">
-            <mva:VisualBasicReference x:TypeArguments="scg:List(x:String)" ExpressionText="list_excelFilesList" />
-          </InOutArgument>
+          <InArgument x:TypeArguments="scg:Dictionary(x:String, x:Object)" x:Key="io_dict_Config">[io_dict_Config]</InArgument>
+          <InOutArgument x:TypeArguments="scg:List(x:String)" x:Key="io_list_ExcelFilesList">[list_excelFilesList]</InOutArgument>
         </ui:InvokeWorkflowFile.Arguments>
       </ui:InvokeWorkflowFile>
       <FlowStep.Next>
@@ -195,13 +191,17 @@
                   <av:PointCollection x:Key="ConnectorLocation">320,612.5 320,644.5</av:PointCollection>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
-              <ui:InvokeCode ContinueOnError="{x:Null}" sap2010:Annotation.AnnotationText="This code snippet changes the registry key so Excel can run VBA macros." Code="Dim Proc As System.Diagnostics.Process = New System.Diagnostics.Process()&#xD;&#xA;&#xD;&#xA;Dim Processinfo As System.Diagnostics.ProcessStartInfo = New System.Diagnostics.ProcessStartInfo()&#xD;&#xA;ProcessInfo.Arguments = &quot; &quot;+ If (in_Permanent = True,&quot;/K&quot;,&quot;/C&quot;)+ &quot; &quot;+in_Command+ &quot; &quot;+in_Arguments&#xD;&#xA;Processinfo.FileName = &quot;cmd.exe&quot;&#xD;&#xA;Proc.Startinfo = ProcessInfo&#xD;&#xA;Proc.Start()" DisplayName="Invoke code - Enable Macros" sap:VirtualizedContainerService.HintSize="200,108" sap2010:WorkflowViewState.IdRef="InvokeCode_1">
+              <ui:InvokeCode ContinueOnError="{x:Null}" sap2010:Annotation.AnnotationText="This code snippet changes the registry key so Excel can run VBA macros." Code="Dim Proc As System.Diagnostics.Process = New System.Diagnostics.Process()&#xA;&#xA;Dim Processinfo As System.Diagnostics.ProcessStartInfo = New System.Diagnostics.ProcessStartInfo()&#xA;ProcessInfo.Arguments = &quot; &quot;+ If (in_Permanent = True,&quot;/K&quot;,&quot;/C&quot;)+ &quot; &quot;+in_Command+ &quot; &quot;+in_Arguments&#xA;Processinfo.FileName = &quot;cmd.exe&quot;&#xA;Proc.Startinfo = ProcessInfo&#xA;Proc.Start()" DisplayName="Invoke code - Enable Macros" sap:VirtualizedContainerService.HintSize="200,108" sap2010:WorkflowViewState.IdRef="InvokeCode_1">
                 <ui:InvokeCode.Arguments>
                   <InArgument x:TypeArguments="x:String" x:Key="in_Arguments">
                     <Literal x:TypeArguments="x:String" Value="" />
                   </InArgument>
-                  <InArgument x:TypeArguments="x:Boolean" x:Key="in_Permanent">False</InArgument>
-                  <InArgument x:TypeArguments="x:String" x:Key="in_Command">REG ADD HKCU\Software\Microsoft\Office\16.0\Excel\Security /v AccessVBOM /t REG_DWORD /f /d 1</InArgument>
+                  <InArgument x:TypeArguments="x:Boolean" x:Key="in_Permanent">
+                    <Literal x:TypeArguments="x:Boolean" />
+                  </InArgument>
+                  <InArgument x:TypeArguments="x:String" x:Key="in_Command">
+                    <Literal x:TypeArguments="x:String">REG ADD HKCU\Software\Microsoft\Office\16.0\Excel\Security /v AccessVBOM /t REG_DWORD /f /d 1</Literal>
+                  </InArgument>
                 </ui:InvokeCode.Arguments>
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -227,12 +227,8 @@
       </sap:WorkflowViewStateService.ViewState>
       <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke GetMultipleExelFiles workflow" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_4" UnSafe="False" WorkflowFileName="Continue_Workflows\GetMultipleExelFiles.xaml">
         <ui:InvokeWorkflowFile.Arguments>
-          <InArgument x:TypeArguments="scg:Dictionary(x:String, x:Object)" x:Key="io_dict_Config">
-            <mva:VisualBasicValue x:TypeArguments="scg:Dictionary(x:String, x:Object)" ExpressionText="io_dict_Config" />
-          </InArgument>
-          <InOutArgument x:TypeArguments="scg:List(x:String)" x:Key="io_list_ExcelFilesList">
-            <mva:VisualBasicReference x:TypeArguments="scg:List(x:String)" ExpressionText="list_excelFilesList" />
-          </InOutArgument>
+          <InArgument x:TypeArguments="scg:Dictionary(x:String, x:Object)" x:Key="io_dict_Config">[io_dict_Config]</InArgument>
+          <InOutArgument x:TypeArguments="scg:List(x:String)" x:Key="io_list_ExcelFilesList">[list_excelFilesList]</InOutArgument>
         </ui:InvokeWorkflowFile.Arguments>
       </ui:InvokeWorkflowFile>
       <FlowStep.Next>

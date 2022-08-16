@@ -3,7 +3,7 @@
     <x:Property Name="io_dict_Config" Type="InArgument(scg:Dictionary(x:String, x:Object))" />
     <x:Property Name="io_list_ExcelFilesList" Type="InOutArgument(scg:List(x:String))" />
   </x:Members>
-  <sap:VirtualizedContainerService.HintSize>1458,561</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1081,560</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="32">
@@ -75,6 +75,7 @@
       <AssemblyReference>UiPath.Excel.Activities.Design</AssemblyReference>
       <AssemblyReference>UiPath.Web.Activities</AssemblyReference>
       <AssemblyReference>System.ServiceModel.Activities</AssemblyReference>
+      <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
   <Sequence DisplayName="Get Single File" sap:VirtualizedContainerService.HintSize="376,458" sap2010:WorkflowViewState.IdRef="Sequence_24">
@@ -85,6 +86,6 @@
     </sap:WorkflowViewStateService.ViewState>
     <uia:BroadcastMessage ContinueOnError="{x:Null}" Channel="[io_dict_Config(&quot;statusWindowChannel&quot;).ToString]" DisplayName="Broadcast Message" sap:VirtualizedContainerService.HintSize="334,132" sap2010:WorkflowViewState.IdRef="BroadcastMessage_13" Message="Processing single Excel file" PollingInterval="10" Timeout="0" />
     <AddToCollection x:TypeArguments="x:String" Collection="[io_list_ExcelFilesList]" DisplayName="Add To ExcelFilesList" sap:VirtualizedContainerService.HintSize="334,22" sap2010:WorkflowViewState.IdRef="AddToCollection`1_4" Item="[io_dict_Config(&quot;selectFile&quot;).ToString]" />
-    <uia:BroadcastMessage ContinueOnError="{x:Null}" Channel="[io_dict_Config(&quot;statusWindowChannel&quot;).ToString]" DisplayName="Broadcast Message" sap:VirtualizedContainerService.HintSize="334,132" sap2010:WorkflowViewState.IdRef="BroadcastMessage_14" Message="[&quot;Aggregating comments and notes for a single file&quot; + vbNewLine + &quot;Please wait...&quot;]" PollingInterval="10" Timeout="0" />
+    <uia:BroadcastMessage ContinueOnError="{x:Null}" Channel="[io_dict_Config(&quot;statusWindowChannel&quot;).ToString]" DisplayName="Broadcast Message" sap:VirtualizedContainerService.HintSize="334,132" sap2010:WorkflowViewState.IdRef="BroadcastMessage_14" Message="[&quot;Summarizing comments and notes for a single file&quot; + vbNewLine + &quot;Please wait...&quot;]" PollingInterval="10" Timeout="0" />
   </Sequence>
 </Activity>

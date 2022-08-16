@@ -1,12 +1,6 @@
 {
   "resetAllValues": false,
-  "formDefaultsGrid": [
-    {
-      "formDefaultsFieldKey": "selectFile",
-      "formDefaultsGridValue": "",
-      "formDefaultsGridDescription": "Reset single Excel file picker to a blank value."
-    }
-  ],
+  "formDefaultsGrid": [],
   "exceptionsGrid": [
     {
       "exceptionsGridFieldKey": "NoExcelFiles",
@@ -27,12 +21,12 @@
     },
     {
       "settingsGridFieldKey": "userGuideUrl",
-      "settingsGridValue": "https://marketplace.uipath.com/listings/summarize-all-comments-and-notes-in-Excel",
+      "settingsGridValue": "https://marketplace.uipath.com/listings/summarize-all-comments-and-notes-in-excel",
       "settingsGridDescription": "URL link to the automation's user guide. Must start with http:// or https:// Example: https://www.google.com"
     },
     {
       "settingsGridFieldKey": "automationDescription",
-      "settingsGridValue": "This process summarizes the comments and notes in Excel workbook(s).",
+      "settingsGridValue": "This automation summarizes the comments and notes in Excel workbook(s).",
       "settingsGridDescription": "Automation description to appear in the Form activity at runtime."
     },
     {

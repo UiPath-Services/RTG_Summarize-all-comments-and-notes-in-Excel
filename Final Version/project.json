@@ -1,6 +1,6 @@
 {
   "name": "Summarize all comments and notes in Excel",
-  "description": "This automation aggregates and summarizes the comments and notes in Excel workbook(s).",
+  "description": "This automation summarizes the comments and notes in Excel workbook(s).",
   "main": "Main.xaml",
   "dependencies": {
     "UiPath.Excel.Activities": "[2.12.3]",
@@ -14,7 +14,7 @@
   "entitiesStores": [],
   "schemaVersion": "4.0",
   "studioVersion": "21.8.0.0",
-  "projectVersion": "2.0.4",
+  "projectVersion": "2.0.8",
   "runtimeOptions": {
     "autoDispose": false,
     "netFrameworkLazyLoading": false,
